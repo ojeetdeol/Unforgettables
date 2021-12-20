@@ -35,7 +35,7 @@
         android:layout_below = "@id/header"
         android:layout_centerVertical="true"
 
-        android:id = "@+id/items_list"
+        android:id = "@+id/locations_list"
         />
 
 </RelativeLayout>

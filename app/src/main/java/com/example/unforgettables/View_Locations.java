@@ -34,6 +34,15 @@ public class View_Locations extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view__locations);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        //Setting listView up with adapter
+        listView = findViewById(R.id.locations_list);
+        location_list = new ArrayList<String>();
+
+        location_list_adapter = new ArrayAdapter<>(getApplicationContext(),
+                android.R.layout.simple_list_item_1,location_list);
+
+        listView.setAdapter(location_list_adapter);
     }
 
     //FIX
@@ -55,7 +64,9 @@ public class View_Locations extends AppCompatActivity {
                         // Got last known location. In some rare situations this can be null.
                         if (location != null) {
                             // Logic to handle location object
-                            System.out.println("here "+ location.getLatitude());
+                            //System.out.println("here "+ location.getLatitude());
+
+
                         }
                         else{
                             System.out.println("no location found");

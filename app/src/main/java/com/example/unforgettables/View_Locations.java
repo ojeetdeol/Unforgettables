@@ -66,6 +66,9 @@ public class View_Locations extends AppCompatActivity {
                         if (location != null) {
                             // Logic to handle location object
                             //System.out.println("here "+ location.getLatitude());
+                            location_list.add(location.getLatitude() + " , " +
+                                    location.getLongitude());
+                            listView.setAdapter(location_list_adapter);
 
 
                         }

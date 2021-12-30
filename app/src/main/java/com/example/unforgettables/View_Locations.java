@@ -38,7 +38,7 @@ public class View_Locations extends AppCompatActivity {
 
         //Setting listView up with adapter
         listView = findViewById(R.id.locations_list);
-        location_list = new ArrayList<String>();
+        location_list = new ArrayList<>();
 
         location_list_adapter = new ArrayAdapter<>(getApplicationContext(),
                 android.R.layout.simple_list_item_1,location_list);
@@ -69,8 +69,7 @@ public class View_Locations extends AppCompatActivity {
                             location_list.add(location.getLatitude() + " , " +
                                     location.getLongitude());
                             listView.setAdapter(location_list_adapter);
-
-
+                            
                         }
                         else{
                             System.out.println("no location found");

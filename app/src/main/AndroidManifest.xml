@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Unforgettables">
+        <activity android:name =".Location_Pop_Up"></activity>
         <activity android:name=".View_Locations"></activity>
         <activity android:name=".View_Items" />
         <activity android:name=".MainActivity">

@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -79,12 +80,16 @@ public class View_Locations extends AppCompatActivity {
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
 
+            /*
             Context context = getApplicationContext();
             CharSequence text = "PLEASE TURN ON LOCATION PERMISSIONS";
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+            */
+            startActivity(new Intent(View_Locations.this,Location_Pop_Up.class));
+
             return;
         }
         mFusedLocationClient.getLastLocation()

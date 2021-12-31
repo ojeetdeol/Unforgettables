@@ -78,6 +78,13 @@ public class View_Locations extends AppCompatActivity {
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
+
+            Context context = getApplicationContext();
+            CharSequence text = "PLEASE TURN ON LOCATION PERMISSIONS";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
             return;
         }
         mFusedLocationClient.getLastLocation()

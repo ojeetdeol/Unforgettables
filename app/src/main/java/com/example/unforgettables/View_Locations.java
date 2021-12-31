@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -44,6 +47,25 @@ public class View_Locations extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,location_list);
 
         listView.setAdapter(location_list_adapter);
+
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                String location_name = location_list.get(position);
+
+                Context context = getApplicationContext();
+                CharSequence text = "DELETED: " + location_name;
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+                location_list.remove(position);
+                listView.setAdapter(location_list_adapter);
+                return false;
+            }
+        });
     }
 
     //FIX

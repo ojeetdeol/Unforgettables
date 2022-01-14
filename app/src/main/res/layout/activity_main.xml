@@ -15,10 +15,10 @@
         android:translationY="300px"
 
         android:fontFamily="@font/courier_prime_bold_italic"
-        android:text = "View Items"
+        android:text = "Practice Mode"
         android:textSize="45px"
 
-        android:onClick="viewItems"
+        android:onClick="practiceMode"
 
         android:id = "@+id/view_items"
         />
@@ -33,11 +33,11 @@
 
         android:translationY="800px"
 
-        android:onClick="viewLocations"
+        android:onClick="timedMode"
 
         android:fontFamily="@font/courier_prime_bold_italic"
         android:textSize="45px"
-        android:text = "View Locations"
+        android:text = "Timed Mode"
 
         />
 

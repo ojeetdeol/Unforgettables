@@ -2,14 +2,9 @@ package com.example.unforgettables;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     /*
@@ -36,14 +31,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void viewItems(View view){
-        Intent intent = new Intent(this,View_Items.class);
+    public void practiceMode(View view){
+        Intent intent = new Intent(this, practice_mode.class);
         startActivity(intent);
     }
 
-    public void viewLocations(View view){
-        Intent intent = new Intent(this,View_Locations.class);
-        startActivity(intent);
+    public void timedMode(View view){
+
     }
 
 }
